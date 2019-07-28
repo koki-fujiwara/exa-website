@@ -18,6 +18,8 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Service from "../views/ServiceComponent";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 class Header extends Component {
 	constructor(props) {
@@ -91,35 +93,37 @@ class Header extends Component {
 							<Collapse isOpen={this.state.isNavOpen} navbar>
 								<Nav navbar>
 									<NavItem>
-										<NavLink className="nav-link nav-a" to="/home">
-											<Link className="nav-a" to="home" smooth={true} offset={-70} duration={500}>
+										<NavLink className="nav-link nav-a" to="/home" smooth={true} offset={-70} duration={500}>
+											{/*<Link className="nav-a" to="home" smooth={true} offset={-70} duration={500}>*/}
 												{" "}
 												主页
-											</Link>
+											{/*</Link>*/}
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink className="nav-link" to="/.">
-											<Link className="nav-a" to="about" smooth={true} offset={-70} duration={500}>
+										<NavLink className="nav-link" to="/aboutus">
+											{/*<Link className="nav-a" to="aboutus" smooth={true} offset={-70} duration={500}>*/}
 												{" "}
 												关于我们
-											</Link>
+											{/*</Link>*/}
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink className="nav-link" to="/.">
-											<Link className="nav-a" to="service" smooth={true} duration={500}>
+										<NavLink className="nav-link nav-a" to="/service">
+                                            {" "}
+                                            产品
+											{/*<Link className="nav-link nav-a" to="/service" smooth={true} duration={500}>
 												{" "}
 												产品
-											</Link>
+											</Link>*/}
 										</NavLink>
 									</NavItem>
 									<NavItem>
-										<NavLink className="nav-link" to="/.">
-											<Link className="nav-a" to="footer" smooth={true} offset={-70} duration={500}>
-												{" "}
+										<NavLink className="nav-link nav-a" to="/email" smooth={true} offset={-70} duration={500}>
+											{/*<Link className="nav-a" to="footer" smooth={true} offset={-70} duration={500}>
+												{" "}*/}
 												联系我们
-											</Link>
+											{/*</Link>*/}
 										</NavLink>
 									</NavItem>
 								</Nav>
