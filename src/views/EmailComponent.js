@@ -10,43 +10,82 @@ class Email extends Component{
         const styleCss = {
             header : {
                 color: 'red',
-                backgroundColor: '#ccc',
+                backgroundColor: '#E0FFFF',
                 "padding-top": '20px',
-                paddingBottom: '20px'
+                paddingBottom: '20px',
+                width: 1110,
+                height: 350
+            }
+        }
+        const styleCss1 = {
+            header : {
+                fontSize : 16,
+                width: "100%",
+                marginTop: 2,
+                marginBottom: 2,
+                color: "#175a5f"
+            }
+        }
+        const styleCss2 = {
+            header : {
+                fontSize : 20,
+                color: "#175a5f",
+                marginLeft: 400
+            }
+        }
+        const styleCss3 = {
+            header : {
+                fontSize : 16,
+                width: "100%",
+                marginTop: 10,
+                marginBottom: 10,
+                color: "#175a5f"
+            }
+        }
+        const styleCss4 = {
+            header : {
+                marginLeft: 200
+            }
+        }
+        const styleCss5 = {
+            header : {
+                height: 100,
+                width : 400
+            }
+        }
+        const styleCss6 = {
+            header : {
+                width : 400
             }
         }
         return(
-            <div className="row justify-content-center">
-                <div className="col-2">
-                <h5>客户服务：</h5>
-                    <ul>
-                        <li className="fa fa-phone fa-lg" />: +852 1234 5678
-                        <br />
-                        <li className="fa fa-fax fa-lg" />: +852 8765 4321
-                        <br />
-                        <li className="fa fa-envelope fa-lg" />: <a href="mailto:info@exa.com">info@exa.com</a>
-                    </ul>
+                <div className="container-bottom jumbotron"  style={styleCss.header}>
+                    <div >
+                        <p style={styleCss2.header}>在线留言</p>
+                    </div>
+                    <div style={styleCss4.header} >
+                        <div style={styleCss1.header}>
+                            <p style={styleCss3.header}>姓名：<input  style={styleCss6.header}/></p>
+
+                        </div>
+                        <div style={styleCss1.header}>
+                            <p style={styleCss3.header}>电话：<input style={styleCss6.header} /></p>
+
+                        </div>
+                        <div style={styleCss1.header}>
+                            <p style={styleCss3.header}>邮箱：<input style={styleCss6.header} /></p>
+
+                        </div>
+                        <div style={styleCss1.header}>
+                            <p style={styleCss3.header}>备注：<input  style={styleCss5.header}/></p>
+
+                        </div>
+                        <button style={styleCss4.header}>提交留言</button>
+                    </div>
+
+
                 </div>
-                <div className="col-3">
-                    <h5>商务合作：</h5>
-                    <ul>
-                        <li className="fa fa-phone fa-lg" />: +852 1234 5678
-                        <br />
-                        <li className="fa fa-fax fa-lg" />: +852 8765 4321
-                        <br />
-                        <li className="fa fa-envelope fa-lg" />: <a href="mailto:info@exa.com">info@exa.com</a>
-                    </ul>
-                </div>
-                <div className="col-3">
-                    <h5>公司地址：</h5>
-                    <ul>
-                        <li className="fa  fa-lg" />总部: 青岛市黄岛区
-                        <br />
-                        <li className="fa  fa-lg" />邮编: 266500
-                        <br />
-                    </ul>
-                </div>
-            </div>
+
         );
     }
 
