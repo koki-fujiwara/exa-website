@@ -2,6 +2,7 @@ import React from "react";
 import { Jumbotron } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function Footer() {
 	return (
@@ -29,31 +30,29 @@ function Footer() {
 							<h5>链接</h5>
 							<ul className="list-unstyled">
 								<li>
-									<NavLink className="nav-link nav-a" to="/home">
-										<Link to="home" smooth={true} offset={-70} duration={500}>
+									<NavLink className="nav-link nav-a" to="/home" smooth={true} offset={-70} duration={500}>
+                                        {/*<Link className="nav-a" to="home" smooth={true} offset={-70} duration={500}>*/}
 											主页
-										</Link>
+										{/*</Link>*/}
 									</NavLink>
 								</li>
 								<li>
-									<NavLink className="nav-link nav-a" to="/home">
-										<Link to="about" smooth={true} offset={-70} duration={500}>
+									<NavLink className="nav-link nav-a" to="/aboutus" smooth={true} offset={-70} duration={500}>
+										{/*<Link to="about" smooth={true} offset={-70} duration={500}>*/}
 											关于我们
-										</Link>
+										{/*</Link>*/}
 									</NavLink>
 								</li>
 								<li>
-									<NavLink className="nav-link nav-a" to="/home">
-										<Link to="service" smooth={true} duration={500}>
+									<NavLink className="nav-link nav-a" to="/service" >
 											产品
-										</Link>
 									</NavLink>
 								</li>
 								<li>
-									<NavLink className="nav-link nav-a" to="/home">
-										<Link to="footer" smooth={true} offset={-70} duration={500}>
+									<NavLink className="nav-link nav-a" to="/email" smooth={true} offset={-70} duration={500}>
+										{/*<Link to="footer" smooth={true} offset={-70} duration={500}>*/}
 											联系我们
-										</Link>
+										{/*</Link>*/}
 									</NavLink>
 								</li>
 							</ul>
